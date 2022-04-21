@@ -13,7 +13,19 @@ jobs:
     runs-on: ubuntu-latest  # windows-latest | macos-latest
     name: Test changed-files
     steps:
-    - name: List all added files
+    - uses: actions/checkout@v3
+    
+    - name: Get changed files using defaults
+        id: changed-files
+        uses: tj-actions/changed-files@v18.7
+
+      - name: Get changed files using a comma separator
+        id: changed-files-comma
+        uses: tj-actions/changed-files@v18.7
+        with:
+          separator: ","
+
+      - name: List all added files
         run: |
           for file in ${{ steps.changed-files.outputs.added_files }}; do
             echo "$file was added"
