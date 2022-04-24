@@ -18,7 +18,12 @@ jobs:
           YEAR: "${{ steps.current-time.outputs.year }}"
           DAY: "${{ steps.current-time.outputs.day }}"
         run: echo $TIME $R_TIME $F_TIME $YEAR $DAY
-      - name: Use Individual Log 
-        run: echo "time ${{ steps.current-time.outputs.time }}"
-      - run: echo "r time ${{ steps.current-time.outputs.readableTime }}"
+      - name: Use TIME  
+        run: echo "${{ steps.current-time.outputs.time }}"
+      - name: Use R_TIME 
+        run: echo "${{ steps.current-time.outputs.readableTime }}"
+      - name: Use F_TIME 
+        run: echo "${{ steps.current-time.outputs.formattedTime }}"
+      - name: USE DAY 
+        run: echo "${{ steps.current-time.outputs.day }}"
   
