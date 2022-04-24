@@ -1,5 +1,5 @@
-New tweet checking /n 
-new Line of tweet /n
+New tweet checking 
+new Line of tweet
 I am here 
 Well done 
 Checking Time
