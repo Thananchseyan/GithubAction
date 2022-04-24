@@ -14,7 +14,7 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - uses: ethomson/send-tweet-action@v1
         with:
-          status: "We have updated our List of BLOGS on ${{ steps.date.outputs.date }}"
+          status: "We have updated our List of BLOGS on ${{ steps.date.outputs.date }}."
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
           consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
