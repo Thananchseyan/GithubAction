@@ -20,7 +20,7 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - uses: ethomson/send-tweet-action@v1
         with:
-          status: "We have updated our List of BLOGS on ${{ steps.current-time.outputs.readableTime }}."
+          status: "We have updated our List of BLOGS on ${{ steps.current-time.outputs.readableTime }} https://www.google.lk/."
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
           consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
