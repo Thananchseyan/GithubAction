@@ -8,6 +8,5 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      runs:
-        using: 'node16'
-        main: 'index.js'
+        - name: Get changed Lines
+          run: 'index.js'
